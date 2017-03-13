@@ -4,6 +4,7 @@ ecr-updater:
     AWS_SECRET_ACCESS_KEY: ${aws_secret_access_key}
     AWS_REGION: ${aws_region}
     AUTO_CREATE: true
+    LOG_LEVEL: debug
   labels:
     io.rancher.container.pull_image: always
     io.rancher.container.create_agent: 'true'
