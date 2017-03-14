@@ -1,9 +1,8 @@
 .catalog:
   name: "ECR Credential Updater"
-  version: "v1.1.0"
+  version: "v2.0.0"
   description: "Updates credentials for ECR in Rancher"
   uuid: ecr-3
-  maximum_rancher_version: 1.4.99
   questions:
     - variable: "aws_access_key_id"
       label: "AWS Access Key ID"
@@ -19,6 +18,18 @@
       label: "AWS Region"
       description: "AWS Region that hosts the ECR"
       default: us-east-1
+      required: true
+      type: "string"
+    - variable: "auto_create"
+      label: "Auto Create"
+      description: "Automatically create registry in Rancher for corresponding ECR repo if it doesn't already exist"
+      default: "true"
+      required: true
+      type: "string"
+    - variable: "log_level"
+      label: "Log Level"
+      description: "Logging level to run service at"
+      default: "INFO"
       required: true
       type: "string"
 ecr-updater:
