@@ -1,6 +1,6 @@
 .catalog:
   name: "ECR Credential Updater"
-  version: "v1.2.3"
+  version: "v1.2.4"
   description: "Updates credentials for ECR in Rancher"
   uuid: ecr-3
   questions:
